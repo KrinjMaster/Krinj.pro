@@ -28,9 +28,10 @@
 		"@sveltejs/adapter-auto": "^2.0.0",
 		"@sveltejs/kit": "^1.20.4",
 		"@sveltejs/package": "^2.0.0",
+		"@typescript-eslint/eslint-plugin": "^6.3.0",
+		"@typescript-eslint/parser": "^6.3.0",
 		"autoprefixer": "^10.4.15",
 		"eslint": "^8.47.0",
-		"eslint-plugin-svelte": "^2.32.4",
 		"postcss": "^8.4.27",
 		"publint": "^0.1.9",
 		"svelte": "^4.2.0",
@@ -42,5 +43,8 @@
 	},
 	"svelte": "./dist/index.js",
 	"types": "./dist/index.d.ts",
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"@tsconfig/svelte": "^5.0.0"
+	}
 }
