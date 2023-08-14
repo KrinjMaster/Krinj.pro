@@ -20,9 +20,3 @@ jobs:
           node-version: 18
       - run: npm ci
       - run: npx playwright install --with-deps chromium
-      - uses: actions/upload-artifact@v3
-        if: always()
-        with:
-          name: playwright-report
-          path: playwright-report/
-          retention-days: 30
