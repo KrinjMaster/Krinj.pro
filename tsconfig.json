@@ -1,8 +1,9 @@
 {
-  "extends": "@tsconfig/svelte/tsconfig.json",
+  "extends": "./.svelte-kit/tsconfig.json",
   "compilerOptions": {
     "target": "esnext",
     "useDefineForClassFields": true,
+    "allowSyntheticDefaultImports": true,
     "module": "esnext",
 		"moduleResolution": "Bundler",
     "resolveJsonModule": true,
@@ -17,6 +18,7 @@
     "checkJs": true,
     "isolatedModules": true
   },
+  "files": ["./src/app.d.ts"],
   "include": ["app/**/*.d.ts", "app/**/*.ts", "app/**/*.js", "app/**/*.svelte"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
