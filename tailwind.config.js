@@ -5,6 +5,7 @@ export default {
     colors: {
       violet: '#865DFF',
       white: '#FFFFFF',
+      transparent: 'transparent',
     },
     extend: {
       keyframes: {
@@ -14,6 +15,14 @@ export default {
           '50%': { opacity: 0},
           '75%': { opacity: 1},
           '100%': { opacity: 0},
+        },
+        moving_text: {
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(-100%)' },
+        },
+        moving_text2: {
+          '0%': { transform: 'translateX(100%)' },
+          '100%': { transform: 'translateX(0%)' },
         }
       },
       animation: {
@@ -22,6 +31,8 @@ export default {
         pulse3: 'pulse 1.50s ease-in-out',
         pulse4: 'pulse 1.75s ease-in-out',
         pulse5: 'pulse 2s ease-in-out',
+        moving_text: 'moving_text 25s linear infinite',
+        moving_text2: 'moving_text2 25s linear infinite'
       }
     },
   },
