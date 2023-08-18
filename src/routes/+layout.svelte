@@ -5,7 +5,7 @@
   import MouseBlob from '../components/MouseBlob.svelte'
   import NavBar from '../components/NavBar.svelte'
 
-  let isRendered = true;
+  let isRendered = false;
 
   let firstPositon = {
     x: null,
@@ -23,12 +23,12 @@
 
   const handleMouseMovements = (event: MouseEvent) => {
     setTimeout(() => {
-      firstPositon.x = event.clientX;
-      firstPositon.y = event.clientY;
+      firstPositon.x = event.pageX;
+      firstPositon.y = event.pageY;
     }, 135)
     setTimeout(() => {
-      secondPositon.x = event.clientX;
-      secondPositon.y = event.clientY;
+      secondPositon.x = event.pageX;
+      secondPositon.y = event.pageY;
     }, 100)
   }
 </script>
@@ -36,10 +36,10 @@
 {#if !isRendered} 
   <Loader />
 {:else}
-  <section on:mousemove={handleMouseMovements} role="none">
+  <main on:mousemove={handleMouseMovements} role="none" class="snap-y snap-mandatory h-screen w-screen overflow-scroll">
     <MouseBlob firstPositon={firstPositon} secondPositon={secondPositon}/>
     <NavBar/>
     <slot>
     </slot>
-  </section>
+  </main>
 {/if}

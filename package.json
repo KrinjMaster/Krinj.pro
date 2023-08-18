@@ -45,6 +45,8 @@
 	"types": "./dist/index.d.ts",
 	"type": "module",
 	"dependencies": {
-		"@tsconfig/svelte": "^5.0.0"
+		"@tsconfig/svelte": "^5.0.0",
+		"animejs": "^3.2.1",
+		"date-fns": "^2.30.0"
 	}
 }

@@ -4,8 +4,16 @@ export default {
   theme: {
     colors: {
       violet: '#865DFF',
+      light_violet: '#bf8bff',
+      light_purple: '#e5d0ff',
       white: '#FFFFFF',
       transparent: 'transparent',
+      black: '#000000',
+      card_border: '#404040',
+      card_bg: '#202020',
+      background: '#131216',
+      sidebar: '#bf8bff',
+      gray: '#606060'
     },
     extend: {
       keyframes: {
