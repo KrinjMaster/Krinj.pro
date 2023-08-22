@@ -1,9 +1,12 @@
 <script lang="ts">
-  import Logo from '$lib/icons/Colored.svg';
-  import Marquee from '../components/Marquee.svelte'
   import { formatDistance } from 'date-fns'
 
-  let dateSince = formatDistance(new Date(2022, 11, 10), new Date())
+  import Logo from '$lib/icons/Colored.svg';
+  import KrinjForecast from '$lib/projects/KrinjForecast.jpg';
+  import Marquee from '../components/Marquee.svelte'
+
+  let dateSince = formatDistance(new Date(2022, 12, 1), new Date())
+
 </script>
 
 <section id="home" class="w-screen h-screen grid grid-cols-2 items-end p-10 snap-center shrink-0">
@@ -27,19 +30,19 @@
     <h1 class="text-9xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-violet to-light_violet h-52">Working w/</h1>
     <div class="flex gap-5 justify-center w-full h-fit">
       <!-- cards -->
-      <div class="w-48 h-48 bg-card_bg rounded-xl border-2 border-card_border p-6">
+      <div class="w-48 h-48 bg-white bg-opacity-5 backdrop-blur-md rounded-xl border-2 border-card_border p-10">
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JS" class="w-full h-full rounded-xl"/>
       </div>
-      <div class="w-48 h-48 bg-card_bg rounded-xl border-2 border-card_border p-6">
+      <div class="w-48 h-48 bg-white bg-opacity-5 backdrop-blur-md rounded-xl border-2 border-card_border p-10">
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TS" class="w-full h-full rounded-xl"/>
       </div>
-      <div class="w-48 h-48 bg-card_bg rounded-xl border-2 border-card_border p-6">
+      <div class="w-48 h-48 bg-white bg-opacity-5 backdrop-blur-md rounded-xl border-2 border-card_border p-10">
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" class="w-full h-full rounded-xl"/>
       </div>
-      <div class="w-48 h-48 bg-card_bg rounded-xl border-2 border-card_border p-6">
+      <div class="w-48 h-48 bg-white bg-opacity-5 backdrop-blur-md rounded-xl border-2 border-card_border p-10">
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/svelte/svelte-original.svg" alt="Svelte" class="w-full h-full rounded-xl"/>
       </div>
-      <div class="w-48 h-48 bg-card_bg rounded-xl border-2 border-card_border p-6">
+      <div class="w-48 h-48 bg-white bg-opacity-5 backdrop-blur-md rounded-xl border-2 border-card_border p-10">
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original-wordmark.svg" alt="Svelte" class="w-full h-full rounded-xl bg-white p-2"/>
       </div>
     </div>
@@ -53,15 +56,29 @@
       <h1>/</h1>
       <h1>Bootstrap</h1>
       <h1>/</h1>
-      <h1>Materal UI</h1>
-      <h1>/</h1>
       <h1>Git</h1>
       <h1>/</h1>
       <h1>Github</h1>
       <h1>/</h1>
       <h1>Vite</h1>
-      <h1>/</h1>
-      <h1>Eslint</h1>
+    </div>
+  </div>
+</section>
+<section id="home" class="w-screen h-screen flex flex-col items-center p-10 snap-center shrink-0">
+  <h1 class="text-white text-8xl font-extrabold">Portfolio</h1>
+  <div class="flex h-full w-full justify-center items-center gap-16">
+    <div class="w-96 h-96 bg-white bg-opacity-5 rounded-xl border-2 border-card_border group">
+      <img src={KrinjForecast} alt="KrinjForecast" class="rounded-xl group-hover:blur-sm transition-all duration-150 ease-linear" />
+      <div class="bg-card_info bottom-48 relative h-48 w-full invisible group-hover:visible rounded-b-xl bg-opacity-50 flex flex-col items-center gap-1.5">
+        <h1 class="text-white text-3xl font-extrabold">Krinj Forecast</h1>
+        <div class="h-6 w-full flex gap-1 justify-center">
+          <span class="w-fit h-8 border-2 border-violet rounded-xl text-white text-sm px-2.5 py-1 text-center">React</span>
+          <span class="w-fit h-8 border-2 border-violet rounded-xl text-white text-sm px-2.5 py-1 text-center">TS</span>
+          <span class="w-fit h-8 border-2 border-violet rounded-xl text-white text-sm px-2.5 py-1 text-center">Vite</span>
+          <span class="w-fit h-8 border-2 border-violet rounded-xl text-white text-sm px-2.5 py-1 text-center">Rest</span>
+        </div>
+        <p class="text-white">project description</p>
+      </div>
     </div>
   </div>
 </section>

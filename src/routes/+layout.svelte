@@ -5,7 +5,7 @@
   import MouseBlob from '../components/MouseBlob.svelte'
   import NavBar from '../components/NavBar.svelte'
 
-  let isRendered = false;
+  let isRendered = true;
 
   let firstPositon = {
     x: null,
@@ -36,7 +36,7 @@
 {#if !isRendered} 
   <Loader />
 {:else}
-  <main on:mousemove={handleMouseMovements} role="none" class="snap-y snap-mandatory h-screen w-screen overflow-scroll">
+  <main on:mousemove={handleMouseMovements} role="none" class="snap-y snap-mandatory h-screen w-screen overflow-scroll scroll-smooth">
     <MouseBlob firstPositon={firstPositon} secondPositon={secondPositon}/>
     <NavBar/>
     <slot>

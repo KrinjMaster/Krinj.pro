@@ -12,7 +12,8 @@ export default {
       card_border: '#404040',
       card_bg: '#202020',
       background: '#131216',
-      sidebar: '#bf8bff',
+      sidebar: '#865DFF',
+      card_info: '#303030',
       gray: '#606060'
     },
     extend: {
