@@ -61,24 +61,33 @@
       <h1>Github</h1>
       <h1>/</h1>
       <h1>Vite</h1>
+      <h1>/</h1>
+      <h1>Esbuild</h1>
     </div>
   </div>
 </section>
-<section id="home" class="w-screen h-screen flex flex-col items-center p-10 snap-center shrink-0">
+<section id="works" class="w-screen h-screen flex flex-col items-center p-10 snap-center shrink-0">
   <h1 class="text-white text-8xl font-extrabold">Portfolio</h1>
   <div class="flex h-full w-full justify-center items-center gap-16">
-    <div class="w-96 h-96 bg-white bg-opacity-5 rounded-xl border-2 border-card_border group">
-      <img src={KrinjForecast} alt="KrinjForecast" class="rounded-xl group-hover:blur-sm transition-all duration-150 ease-linear" />
-      <div class="bg-card_info bottom-48 relative h-48 w-full invisible group-hover:visible rounded-b-xl bg-opacity-50 flex flex-col items-center gap-1.5">
+    <div class="w-96 h-96 bg-white bg-opacity-5 backdrop-blur-md rounded-xl border-2 border-card_border p-10 text-white text-center">
+      <h1 class="text-2xl font-extrabold">Soon will be updated</h1>
+      <p class="text-xl">Stay tuned</p>
+    </div>
+    <div class="w-96 h-96 bg-krinj_forecast hover:bg-krinj_forecast_hover bg-cover rounded-xl border-2 border-card_border group flex items-end transition-colors duration-150 ease-linear z-20">
+      <div class="bg-card_info h-48 p-2 w-full rounded-b-xl bg-opacity-50 flex flex-col items-center gap-2 invisible group-hover:visible group-hover:animate-card_fade">
         <h1 class="text-white text-3xl font-extrabold">Krinj Forecast</h1>
-        <div class="h-6 w-full flex gap-1 justify-center">
+        <div class="h-fit w-full flex gap-1 justify-center">
           <span class="w-fit h-8 border-2 border-violet rounded-xl text-white text-sm px-2.5 py-1 text-center">React</span>
           <span class="w-fit h-8 border-2 border-violet rounded-xl text-white text-sm px-2.5 py-1 text-center">TS</span>
           <span class="w-fit h-8 border-2 border-violet rounded-xl text-white text-sm px-2.5 py-1 text-center">Vite</span>
           <span class="w-fit h-8 border-2 border-violet rounded-xl text-white text-sm px-2.5 py-1 text-center">Rest</span>
         </div>
-        <p class="text-white">project description</p>
+        <p class="text-white font-bold text-center">This is my first small-size projects besides "Todo list". This projects is using real-time weather data to show the most accurate forecast.</p>
       </div>
+    </div>
+    <div class="w-96 h-96 bg-white bg-opacity-5 backdrop-blur-md rounded-xl border-2 border-card_border p-10 text-white text-center">
+      <h1 class="text-2xl font-extrabold">Soon will be updated</h1>
+      <p class="text-xl">Stay tuned</p>
     </div>
   </div>
 </section>

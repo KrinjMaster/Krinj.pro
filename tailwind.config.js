@@ -17,6 +17,10 @@ export default {
       gray: '#606060'
     },
     extend: {
+      backgroundImage: {
+        'krinj_forecast_hover': 'linear-gradient(#fff0 0% ,#303030 50%),url("/src/lib/projects/KrinjForecast.jpg")',
+        'krinj_forecast': 'url("/src/lib/projects/KrinjForecast.jpg")',
+      },
       keyframes: {
         pulse: {
           '0%': { opacity: 0},
@@ -32,6 +36,10 @@ export default {
         moving_text2: {
           '0%': { transform: 'translateX(100%)' },
           '100%': { transform: 'translateX(0%)' },
+        },
+        fade_down:{
+          '0%': { opacity: 0, transform: 'translateY(25%)' },
+          '100%': { opacity: 1, transform: 'translateY(0%)' }
         }
       },
       animation: {
@@ -41,7 +49,8 @@ export default {
         pulse4: 'pulse 1.75s ease-in-out',
         pulse5: 'pulse 2s ease-in-out',
         moving_text: 'moving_text 25s linear infinite',
-        moving_text2: 'moving_text2 25s linear infinite'
+        moving_text2: 'moving_text2 25s linear infinite',
+        card_fade: 'fade_down 0.25s linear',
       }
     },
   },
