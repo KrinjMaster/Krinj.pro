@@ -2,7 +2,7 @@
   // @ts-nocheck
   import { formatDistance } from 'date-fns'
 
-  import Logo from '$lib/icons/Colored.svg';
+  import Logo from '../lib/icons/Colored.svg';
   import Marquee from '../components/Marquee.svelte'
 
   let dateSince = formatDistance(new Date(2022, 12, 1), new Date())

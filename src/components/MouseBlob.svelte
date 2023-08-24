@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { Position } from "src/app"
+  import type { Position } from "../app"
 
   export let firstPositon: Position;
   export let secondPositon: Position;

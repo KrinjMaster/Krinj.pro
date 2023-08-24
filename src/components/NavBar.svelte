@@ -1,9 +1,9 @@
 <script lang="ts">
-  // @ts-nocheck 
-  import Logo from '$lib/icons/LogoSVG.svg';
-  import Github from '$lib/icons/Github.svg';
-  import Telegram from '$lib/icons/Telegram.svg';
-  import Mail from '$lib/icons/Mail.svg';
+  // @ts-nocheck
+  import Logo from '../lib/icons/LogoSVG.svg';
+  import Github from '../lib/icons/Github.svg';
+  import Telegram from '../lib/icons/Telegram.svg';
+  import Mail from '../lib/icons/Mail.svg';
   import anime from 'animejs';
   import { onMount } from 'svelte'
 
@@ -65,9 +65,9 @@
 </div>
 <div id="sidebar" class={`fixed h-full w-1/3 flex flex-col justify-between bg-sidebar text-white font-extrabold text-7xl p-8 z-10 transition-opacity ease-linear whitespace-nowrap`}>
   <div class="flex flex-col gap-2.5 items-center">
-    <a href="#home" on:click={() => changeButtonVisibility(open)}><p class="hover:scale-x-125 transition-all duration-150 ease-linear border border-white">Home</p></a>
-    <a href="#about"  on:click={() => changeButtonVisibility(open)}><p class="hover:scale-x-125 transition-all duration-150 ease-linear">About me</p></a>
-    <a href="#works"><p class="hover:scale-x-125 transition-all duration-150 ease-linear">Works</p></a>
+    <a href="#home" on:click={() => changeButtonVisibility(open)}><p class="hover:scale-x-125 transition-all duration-150 ease-linear">Home</p></a>
+    <a href="#about" on:click={() => changeButtonVisibility(open)}><p class="hover:scale-x-125 transition-all duration-150 ease-linear">About me</p></a>
+    <a href="#works" on:click={() => changeButtonVisibility(open)}><p class="hover:scale-x-125 transition-all duration-150 ease-linear">Works</p></a>
   </div>
   <div class="flex gap-5">
     <a tabindex="-1" target="_blank" href="https://github.com/KrinjMaster" class="hover:scale-125 transition-transform duration-150 ease-linear p-2.5">
