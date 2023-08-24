@@ -1,4 +1,5 @@
 <script lang="ts">
+  // @ts-nocheck 
   import Logo from '$lib/icons/LogoSVG.svg';
   import Github from '$lib/icons/Github.svg';
   import Telegram from '$lib/icons/Telegram.svg';

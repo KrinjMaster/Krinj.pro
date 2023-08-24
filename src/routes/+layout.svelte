@@ -7,12 +7,18 @@
 
   let isRendered = true;
 
-  let firstPositon = {
+  let firstPositon: {
+    x: null | number
+    y: null | number
+  } = {
     x: null,
     y: null
   }
 
-  let secondPositon = {
+  let secondPositon: {
+    x: null | number
+    y: null | number
+  } = {
     x: null,
     y: null
   }
