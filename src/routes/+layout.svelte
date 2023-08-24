@@ -5,7 +5,7 @@
   import MouseBlob from '../components/MouseBlob.svelte'
   import NavBar from '../components/NavBar.svelte'
 
-  let isRendered = true;
+  let isRendered = false;
 
   let firstPositon: {
     x: null | number
