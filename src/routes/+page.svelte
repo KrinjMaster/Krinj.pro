@@ -9,12 +9,12 @@
 
 </script>
 
-<section id="home" class="w-screen h-screen grid grid-cols-2 items-end p-10 snap-center shrink-0">
+<section id="home" class="w-screen h-screen grid md:grid-cols-2 grid-cols-1 items-end p-10 snap-center shrink-0">
   <div class="flex h-full items-end">
-    <h1 class="text-white text-8xl font-extrabold w-full">Sup, <br/> Im Max</h1>
+    <h1 class="text-white md:text-8xl text-6xl font-extrabold w-full">Sup, <br/> Im Max</h1>
   </div>
-  <div class="flex h-full items-end justify-end">
-    <img src={Logo} alt="Logo" class="w-96 h-96">
+  <div class="flex h-full items-end md:justify-end justify-center md:order-none order-first">
+    <img src={Logo} alt="Logo" class="md:w-96 md:h-96 w-40 h-40">
   </div>
   <Marquee />
 </section>
@@ -73,16 +73,16 @@
       <h1 class="text-2xl font-extrabold">Soon will be updated</h1>
       <p class="text-xl">Stay tuned</p>
     </div>
-    <div class="w-96 h-96 bg-krinj_forecast hover:bg-krinj_forecast_hover bg-cover rounded-xl border-2 border-card_border group flex items-end transition-colors duration-150 ease-linear z-20">
+    <div class="w-96 h-96 bg-krinj_forecast hover:bg-krinj_forecast_hover bg-cover rounded-xl border-2 border-card_border group flex items-end transition-colors duration-150 ease-linear z-20 ">
       <div class="bg-card_info h-48 p-2 w-full rounded-b-xl bg-opacity-50 flex flex-col items-center gap-2 invisible group-hover:visible group-hover:animate-card_fade">
-        <h1 class="text-white text-3xl font-extrabold">Krinj Forecast</h1>
-        <div class="h-fit w-full flex gap-1 justify-center">
+        <h1 class="text-white text-3xl font-extrabold invisible group-hover:visible group-hover:animate-card_fade3">Krinj Forecast</h1>
+        <div class="h-fit w-full flex gap-1 justify-center invisible group-hover:visible group-hover:animate-card_fade2">
           <span class="w-fit h-8 border-2 border-violet rounded-xl text-white text-sm px-2.5 py-1 text-center">React</span>
           <span class="w-fit h-8 border-2 border-violet rounded-xl text-white text-sm px-2.5 py-1 text-center">TS</span>
           <span class="w-fit h-8 border-2 border-violet rounded-xl text-white text-sm px-2.5 py-1 text-center">Vite</span>
           <span class="w-fit h-8 border-2 border-violet rounded-xl text-white text-sm px-2.5 py-1 text-center">Rest</span>
         </div>
-        <p class="text-white font-bold text-center">This is my first small-size projects besides "Todo list". This projects is using real-time weather data to show the most accurate forecast.</p>
+        <p class="text-white font-bold text-center invisible group-hover:visible group-hover:animate-card_fade">This is my first small-size projects besides "Todo list". This projects is using real-time weather data to show the most accurate forecast.</p>
       </div>
     </div>
     <div class="w-96 h-96 bg-white bg-opacity-5 backdrop-blur-md rounded-xl border-2 border-card_border p-10 text-white text-center">

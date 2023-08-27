@@ -50,7 +50,11 @@ export default {
         pulse5: 'pulse 2s ease-in-out',
         moving_text: 'moving_text 25s linear infinite',
         moving_text2: 'moving_text2 25s linear infinite',
-        card_fade: 'fade_down 0.25s linear',
+        moving_text_mob: 'moving_text 10s linear infinite',
+        moving_text2_mob: 'moving_text2 10s linear infinite',
+        card_fade: 'fade_down 0.25s ease-in-out',
+        card_fade2: 'fade_down 0.50s ease-in-out',
+        card_fade3: 'fade_down 1s ease-in-out',
       }
     },
   },

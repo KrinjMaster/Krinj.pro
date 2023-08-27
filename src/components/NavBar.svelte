@@ -14,11 +14,19 @@
     const navbar = document.querySelectorAll('#sidebar')
     const animateX = window.innerWidth - ( window.innerWidth / 3)
     
-    anime({
-      targets: navbar,
-      translateX: animateX*1.5,
-      duration: 0,
-    })
+    if (window.innerWidth < 1024) {
+      anime({
+        targets: navbar,
+        translateX: window.innerWidth,
+        duration: 0,
+      })
+    } else {
+      anime({
+        targets: navbar,
+        translateX: animateX * 1.5,
+        duration: 0,
+      })
+    }
   })
 
   const handleDisableButton = () => {
@@ -35,21 +43,41 @@
       open = !prevState
       
       if (!prevState) {
-        anime({
-          targets: navbar,
-          translateX: animateX,
-          easing: 'easeInOutQuad',
-          duration: 500,
-        })
-        handleDisableButton()
+        if (window.innerWidth < 1024) {
+          anime({
+            targets: navbar,
+            translateX: 0,
+            easing: 'easeInOutQuad',
+            duration: 500,
+          })
+          handleDisableButton()
+        } else {
+          anime({
+            targets: navbar,
+            translateX: animateX,
+            easing: 'easeInOutQuad',
+            duration: 500,
+          })
+          handleDisableButton()
+        }
       } else {
-        anime({
-          targets: navbar,
-          translateX: animateX*1.5,
-          easing: 'easeInOutQuad',
-          duration: 500,
-        })
-        handleDisableButton()
+        if (window.innerWidth < 1024) {
+          anime({
+            targets: navbar,
+            translateX: window.innerWidth,
+            easing: 'easeInOutQuad',
+            duration: 500,
+          })
+          handleDisableButton()
+        } else {
+          anime({
+            targets: navbar,
+            translateX: animateX * 1.5,
+            easing: 'easeInOutQuad',
+            duration: 500,
+          })
+          handleDisableButton()
+        }
       }
     }
   }
@@ -63,7 +91,7 @@
     <span class={`h-1 rounded-xl transition-transform duration-350 ease-in-out bg-white ${open ? '-rotate-45 absolute w-12': 'w-4'}`}></span>
   </div>
 </div>
-<div id="sidebar" class={`fixed h-full w-1/3 flex flex-col justify-between bg-sidebar text-white font-extrabold text-7xl p-8 z-10 transition-opacity ease-linear whitespace-nowrap`}>
+<div id="sidebar" class={`fixed h-full md:w-1/3 w-screen flex flex-col justify-between bg-sidebar text-white font-extrabold md:text-7xl text-5xl p-8 z-10 transition-opacity ease-linear whitespace-nowrap`}>
   <div class="flex flex-col gap-2.5 items-center">
     <a href="#home" on:click={() => changeButtonVisibility(open)}><p class="hover:scale-x-125 transition-all duration-150 ease-linear">Home</p></a>
     <a href="#about" on:click={() => changeButtonVisibility(open)}><p class="hover:scale-x-125 transition-all duration-150 ease-linear">About me</p></a>
