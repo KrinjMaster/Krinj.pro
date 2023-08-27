@@ -1,4 +1,4 @@
-name: Testin Playwright
+name: Build test
 
 on: 
   push: 
