@@ -101,7 +101,7 @@
     <a tabindex="-1" target="_blank" href="https://github.com/KrinjMaster" class="hover:scale-125 transition-transform duration-150 ease-linear p-2.5">
       <img src={Github} alt="Github logo" class="w-12 h-12"/>
     </a>
-    <a tabindex="-1" target="_blank" href="https://github.com/KrinjMaster" class="hover:scale-125 transition-transform duration-150 ease-linear p-2.5">
+    <a tabindex="-1" target="_blank" href="https://t.me/krinjmaster" class="hover:scale-125 transition-transform duration-150 ease-linear p-2.5">
       <img src={Telegram} alt="Telegram logo" class="w-12 h-12"/>
     </a>
     <a tabindex="-1" target="_blank" href="mailto:developer@krinj.pro" class="hover:scale-125 transition-transform duration-150 ease-linear p-2.5">
