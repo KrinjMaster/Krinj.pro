@@ -1,0 +1,17 @@
+@import 'tailwindcss';
+@plugin 'tailwindcss-motion';
+
+@theme {
+	--animate-logo-start: logo-start 1s ease-out;
+	@keyframes logo-start {
+		0% {
+			transform: translateX(-300%);
+			opacity: 0;
+		}
+		,
+		50% {
+			transform: translateX(0);
+			opacity: 1;
+		}
+	}
+}
