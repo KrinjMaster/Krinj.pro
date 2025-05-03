@@ -1,101 +1,60 @@
-<script>
+<script lang="ts">
+	import { animate, stagger } from 'motion';
 	import { onMount } from 'svelte';
 
-	let isSeen = $state(true);
+	let textSize = $state(0);
 
 	onMount(() => {
-		setTimeout(() => {
-			isSeen = false;
-		}, 2500);
+		resizeText();
+		animate(
+			`.intro-letter1`,
+			{ y: [0, -textSize] },
+			{ delay: stagger(0.1, { startDelay: 0.25 }), duration: 0.5, ease: 'circIn' }
+		);
+		animate(
+			`.intro-letter2`,
+			{ y: [textSize, 0] },
+			{ delay: 0.75, duration: 0.5, ease: 'circOut' }
+		).finished.then(() => {
+			animate(
+				'#letter_m2',
+				{ x: [0, textSize * 0.55] },
+				{ delay: 0.35, duration: 0.75, type: 'spring', stiffness: 80, ease: 'easeInOut' }
+			);
+		});
+
+		animate(
+			'#lower_logo',
+			{ y: textSize * 0.295, opacity: [0, 0, 0, 0, 0, 0, 0, 1] },
+			{ ease: 'easeOut', delay: 2.5, duration: 0.25 }
+		);
 	});
-	// class="motion-duration-1500 motion-delay-1500 motion-ease-in-out flex h-full w-full border"
+
+	const resizeText = () => {
+		textSize = window.innerWidth / 3;
+	};
 </script>
 
-{#if isSeen}
-	<div class="h-full w-full overflow-hidden">
-		<div
-			class="motion-duration-1500 motion-translate-y-out-100 motion-delay-1000 motion-ease-in-out flex h-full w-full"
-		>
-			<div class="m-auto flex flex-col gap-32">
-				<img
-					alt="logo"
-					src="/logo.svg"
-					class="motion-translate-x-in-[250%] motion-opacity-in-0 motion-scale-in-75 motion-duration-700 motion-ease-in-out m-auto w-64"
-				/>
-				<div class="m-auto flex gap-1 text-8xl font-extrabold">
-					<h1
-						class="motion-preset-slide-up-lg motion-duration-600 motion-ease-in-out motion-delay-100"
-					>
-						W
-					</h1>
-					<h1
-						class="motion-preset-slide-up-lg motion-duration-600 motion-ease-in-out motion-delay-50"
-					>
-						a
-					</h1>
-					<h1
-						class="motion-preset-slide-up-lg motion-duration-600 motion-ease-in-out motion-delay-150"
-					>
-						s
-					</h1>
-					<h1
-						class="motion-preset-slide-up-lg motion-duration-600 motion-ease-in-out motion-delay-100"
-					>
-						s
-					</h1>
-					<h1
-						class="motion-preset-slide-up-lg motion-duration-600 motion-ease-in-out motion-delay-75"
-					>
-						u
-					</h1>
-					<h1
-						class="motion-preset-slide-up-lg motion-duration-600 motion-ease-in-out motion-delay-100"
-					>
-						p
-					</h1>
-					<h1>&nbsp;</h1>
-					<h1
-						class="motion-preset-slide-up-lg motion-duration-600 motion-ease-in-out motion-delay-100"
-					>
-						s
-					</h1>
-					<h1
-						class="motion-preset-slide-up-lg motion-duration-600 motion-ease-in-out motion-delay-75"
-					>
-						t
-					</h1>
-					<h1
-						class="motion-preset-slide-up-lg motion-duration-600 motion-ease-in-out motion-delay-200"
-					>
-						r
-					</h1>
-					<h1
-						class="motion-preset-slide-up-lg motion-duration-600 motion-ease-in-out motion-delay-150"
-					>
-						a
-					</h1>
-					<h1
-						class="motion-preset-slide-up-lg motion-duration-600 motion-ease-in-out motion-delay-100"
-					>
-						n
-					</h1>
-					<h1
-						class="motion-preset-slide-up-lg motion-duration-600 motion-ease-in-out motion-delay-75"
-					>
-						g
-					</h1>
-					<h1
-						class="motion-preset-slide-up-lg motion-duration-600 motion-ease-in-out motion-delay-200"
-					>
-						e
-					</h1>
-					<h1
-						class="motion-preset-slide-up-lg motion-duration-600 motion-ease-in-out motion-delay-150"
-					>
-						r
-					</h1>
-				</div>
-			</div>
-		</div>
+<svelte:window on:resize={resizeText} />
+<div
+	style={`font-size: ${textSize}px`}
+	class="absolute z-[100] flex h-full w-full flex-col items-center justify-center gap-0 overflow-hidden bg-[#BBBEFE] font-extrabold"
+>
+	<div style={`line-height: ${textSize * 0.85}px`} class="absolute flex overflow-clip">
+		<h1 id="letter_m1" class="intro-letter1">M</h1>
+		<h1 id="secondary_text" class="intro-letter1">a</h1>
+		<h1 id="secondary_text" class="intro-letter1">x</h1>
 	</div>
-{/if}
+	<div style={`line-height: ${textSize * 0.85}px`} class="flex w-full justify-center overflow-clip">
+		<h1 id="letter_m2" class="intro-letter2">M</h1>
+		<h1 id="secondary_text2" class="intro-letter2 invisible">a</h1>
+		<h1 id="secondary_text2" class="intro-letter2 invisible">x</h1>
+	</div>
+	<h1
+		id="lower_logo"
+		style={`width: ${textSize / 1.35}px; height: ${textSize / 6}px`}
+		class="absolute right-0 left-0 mx-auto bg-white"
+	>
+		_
+	</h1>
+</div>
