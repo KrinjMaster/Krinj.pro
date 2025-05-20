@@ -2,7 +2,10 @@
 @plugin 'tailwindcss-motion';
 
 @theme {
+	--font-editundo: 'EditUndo';
+	/* --font-calsans: 'CalSans'; */
 	--animate-marquee: marquee 1.5s infinite linear;
+	--shadow-card-image: 0px -25px 40px 20px #0b0b0b inset;
 	@keyframes marquee {
 		0% {
 			transform: translateX(100%);
@@ -16,7 +19,7 @@
 }
 
 ::-webkit-scrollbar {
-	width: 10px;
+	width: 7px;
 }
 
 ::-webkit-scrollbar-track {
@@ -24,10 +27,21 @@
 }
 
 ::-webkit-scrollbar-thumb {
-	background: #bf8bff;
+	background: gray;
 	border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
 	background: #bf8bff;
+}
+
+@font-face {
+	font-family: 'EditUndo';
+	font-style: normal;
+	font-display: swap;
+	src: url('EditUndo.ttf');
+}
+
+html {
+	scroll-behavior: smooth;
 }

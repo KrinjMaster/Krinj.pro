@@ -14,19 +14,24 @@
 		animate(
 			`.intro-letter2`,
 			{ y: [textSize, 0] },
-			{ delay: 0.75, duration: 0.5, ease: 'circOut' }
+			{ delay: 0.6, duration: 0.5, ease: 'circOut' }
 		).finished.then(() => {
 			animate(
 				'#letter_m2',
 				{ x: [0, textSize * 0.55] },
-				{ delay: 0.35, duration: 0.75, type: 'spring', stiffness: 80, ease: 'easeInOut' }
-			);
+				{ delay: 0.25, duration: 0.5, type: 'spring', stiffness: 80, ease: 'easeInOut' }
+			).finished.then(() => {
+				animate('#intro-section', { y: [0, '-100%'] }, { duration: 0.5, ease: 'circIn' });
+			});
 		});
 
 		animate(
 			'#lower_logo',
-			{ y: textSize * 0.295, opacity: [0, 0, 0, 0, 0, 0, 0, 1] },
-			{ ease: 'easeOut', delay: 2.5, duration: 0.25 }
+			{
+				y: [textSize * 0.295, textSize * 0.295],
+				clipPath: ['inset(100% 0 0 0)', 'inset(0 0 0 0)']
+			},
+			{ ease: 'circIn', delay: 2.5, duration: 0.15 }
 		);
 	});
 
@@ -37,8 +42,9 @@
 
 <svelte:window on:resize={resizeText} />
 <div
+	id="intro-section"
 	style={`font-size: ${textSize}px`}
-	class="absolute z-[100] flex h-full w-full flex-col items-center justify-center gap-0 overflow-hidden bg-[#BBBEFE] font-extrabold"
+	class="fixed top-0 z-[100] flex h-screen w-screen flex-col items-center justify-center gap-0 bg-[#BBBEFE] font-sans font-extrabold"
 >
 	<div style={`line-height: ${textSize * 0.85}px`} class="absolute flex overflow-clip">
 		<h1 id="letter_m1" class="intro-letter1">M</h1>
@@ -53,7 +59,7 @@
 	<h1
 		id="lower_logo"
 		style={`width: ${textSize / 1.35}px; height: ${textSize / 6}px`}
-		class="absolute right-0 left-0 mx-auto bg-white"
+		class="absolute right-0 left-0 mx-auto border bg-white"
 	>
 		_
 	</h1>

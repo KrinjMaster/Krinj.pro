@@ -1,22 +1,51 @@
 <script lang="ts">
+	import { animate } from 'motion';
 	import { onMount } from 'svelte';
 
-	let isVisible = $state(false);
-
-	const scrollFunction = () => {
-		const mainSection = document.getElementById('main');
-
-		if (mainSection) {
-			const mainSectionRect = mainSection.getBoundingClientRect();
-
-			isVisible = mainSectionRect.top >= 0 && mainSectionRect.bottom <= window.innerHeight;
-		}
-	};
+	onMount(() => {
+		animate(
+			'#navbar',
+			{
+				y: ['-100%', 0]
+			},
+			{
+				type: 'spring',
+				delay: 3,
+				duration: 1
+			}
+		);
+	});
 </script>
 
-<svelte:body on:scroll={() => console.log('true')} />
-<div
-	class={`${isVisible ? 'visible' : 'invisible'} fixed top-0 z-[1] flex h-16 w-full items-center rounded-md border bg-gray-400/5 bg-clip-padding text-start backdrop-blur-sm backdrop-filter`}
->
-	<h1 class="text-5xl font-extrabold">ABOUT ME</h1>
-</div>
+<nav id="navbar" class="fixed top-0 z-[100] flex h-12 w-screen items-center px-5 py-2.5">
+	<ul
+		class="flex h-10 items-center justify-center gap-5 rounded-2xl bg-white/5 px-5 text-2xl font-extrabold font-stretch-200% backdrop-blur-lg"
+	>
+		<li>
+			<a href="#main"
+				><img
+					id="logo"
+					src="/LOGO.svg"
+					alt="logo"
+					class="h-7 transition-all duration-200 ease-in-out hover:scale-90"
+				/></a
+			>
+		</li>
+		<li class="group w-32 text-center">
+			<a href="#about" class="transition-all duration-400 ease-in-out group-hover:font-stretch-125%"
+				>ABOUT</a
+			>
+		</li>
+		<li class="group w-32 text-center">
+			<a href="#work" class="transition-all duration-400 ease-in-out group-hover:font-stretch-125%"
+				>WORK</a
+			>
+		</li>
+		<li class="group w-48 text-center">
+			<a
+				href="#contact"
+				class="transition-all duration-400 ease-in-out group-hover:font-stretch-125%">CONTACT</a
+			>
+		</li>
+	</ul>
+</nav>
