@@ -54,12 +54,12 @@
 
 <section
 	id="main"
-	class="desktop:flex-row flex h-screen w-full flex-col-reverse justify-between font-stretch-150%"
+	class="flex h-screen w-full flex-col-reverse justify-between font-stretch-150% xl:flex-row"
 >
-	<div class="double:w-fit flex h-full w-full">
-		<div class="flex w-full flex-col justify-center">
+	<div class="flex h-full w-full xl:w-fit">
+		<div class="flex w-full flex-col justify-start sm:justify-center">
 			<span
-				class="greeting-text desktop:text-9xl desktop:justify-start flex flex-wrap justify-center gap-0 overflow-clip pl-2.5 text-6xl font-extrabold"
+				class="greeting-text lg:text-7x flex flex-wrap justify-center gap-0 overflow-clip pl-2.5 text-5xl font-extrabold sm:text-6xl md:text-7xl xl:justify-start xl:text-8xl 2xl:text-9xl"
 			>
 				<p>H</p>
 				<p>i</p>
@@ -75,7 +75,7 @@
 			</span>
 			<div class="flex items-end gap-1.5 text-center">
 				<span
-					class="short-bio desktop:w-fit desktop:text-2xl textl-xl desktop:justify-start flex w-full flex-wrap justify-center pl-4.5 font-normal"
+					class="short-bio textl-sm flex w-full flex-wrap justify-center px-2.5 pl-4.5 font-normal sm:text-sm md:text-sm lg:text-lg xl:w-fit xl:justify-start xl:text-lg 2xl:text-xl"
 				>
 					<p>I'm</p>
 					<span>&nbsp;</span>
@@ -110,15 +110,15 @@
 			</div>
 		</div>
 	</div>
-	<div class="desktop:w-[35rem] desktop:h-full flex h-[50%] w-full flex-col p-5">
+	<div class="flex h-[60vh] w-full flex-col p-5 xl:h-full xl:w-[35rem]">
 		<img
 			src="/profile.jpg"
 			alt="profile picture"
-			class="motion-preset-slide-left-lg motion-opacity-in-0 motion-duration-1000 motion-delay-3500 desktop:w-full m-auto w-72 rounded-full"
+			class="motion-preset-slide-left-lg motion-opacity-in-0 motion-duration-1000 motion-delay-3500 m-auto w-96 rounded-full sm:w-[25rem] md:w-[25rem] lg:w-[30rem] xl:w-[25rem] 2xl:w-[40rem]"
 		/>
 	</div>
 	<svg
-		class="motion-preset-fade-lg motion-delay-3600 desktop:w-[35rem] desktop:h-[16rem] absolute top-0 right-0 z-[1] ml-auto h-[10rem] w-[22rem]"
+		class="motion-preset-fade-lg motion-delay-3600 absolute top-0 right-0 z-[1] ml-auto h-[10rem] w-[22rem] xl:h-[16rem] xl:w-[35rem]"
 		viewBox="0 0 601 258"
 	>
 		<path
