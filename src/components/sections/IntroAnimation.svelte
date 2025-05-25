@@ -21,7 +21,11 @@
 				{ x: [0, textSize * 0.55] },
 				{ delay: 0.25, duration: 0.5, type: 'spring', stiffness: 80, ease: 'easeInOut' }
 			).finished.then(() => {
-				animate('#intro-section', { y: [0, '-100%'] }, { duration: 0.5, ease: 'circIn' });
+				animate(
+					'#intro-section',
+					{ y: [0, '-100%'] },
+					{ duration: 0.5, ease: 'circIn', delay: 0.25 }
+				);
 			});
 		});
 

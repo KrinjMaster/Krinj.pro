@@ -35,7 +35,7 @@
 			},
 			{
 				duration: 0.5,
-				delay: stagger(0.03, { startDelay: 3.2 })
+				delay: stagger(0.03, { startDelay: 3.5 })
 			}
 		);
 
@@ -46,7 +46,7 @@
 			},
 			{
 				duration: 1,
-				delay: stagger(0.05, { startDelay: 3.2 })
+				delay: stagger(0.05, { startDelay: 3.5 })
 			}
 		);
 	});
@@ -57,9 +57,9 @@
 	class="flex h-screen w-full flex-col-reverse justify-between font-stretch-150% xl:flex-row"
 >
 	<div class="flex h-full w-full xl:w-fit">
-		<div class="flex w-full flex-col justify-start sm:justify-center">
+		<div class="jusitify-start flex w-full flex-col md:justify-center">
 			<span
-				class="greeting-text lg:text-7x flex flex-wrap justify-center gap-0 overflow-clip pl-2.5 text-5xl font-extrabold sm:text-6xl md:text-7xl xl:justify-start xl:text-8xl 2xl:text-9xl"
+				class="greeting-text xs:text-5xl flex flex-wrap justify-center gap-0 overflow-clip text-4xl font-extrabold sm:text-7xl md:text-8xl lg:text-8xl xl:justify-start xl:pl-3.5 xl:text-8xl 2xl:pl-2.5 2xl:text-9xl"
 			>
 				<p>H</p>
 				<p>i</p>
@@ -75,7 +75,7 @@
 			</span>
 			<div class="flex items-end gap-1.5 text-center">
 				<span
-					class="short-bio textl-sm flex w-full flex-wrap justify-center px-2.5 pl-4.5 font-normal sm:text-sm md:text-sm lg:text-lg xl:w-fit xl:justify-start xl:text-lg 2xl:text-xl"
+					class="short-bio xs:text-sm mt-2.5 flex w-full flex-wrap justify-center px-2.5 pl-4.5 text-[0.75rem] font-normal sm:text-lg md:mt-0 md:text-3xl lg:text-lg xl:w-fit xl:justify-start xl:text-lg 2xl:text-xl"
 				>
 					<p>I'm</p>
 					<span>&nbsp;</span>
@@ -114,11 +114,11 @@
 		<img
 			src="/profile.jpg"
 			alt="profile picture"
-			class="motion-preset-slide-left-lg motion-opacity-in-0 motion-duration-1000 motion-delay-3500 m-auto w-96 rounded-full sm:w-[25rem] md:w-[25rem] lg:w-[30rem] xl:w-[25rem] 2xl:w-[40rem]"
+			class="motion-preset-slide-left-lg motion-opacity-in-0 motion-duration-1000 motion-delay-3700 xs:w-96 m-auto w-80 rounded-full sm:w-[25rem] md:w-[30rem] lg:w-[30rem] xl:w-[25rem] 2xl:w-[40rem]"
 		/>
 	</div>
 	<svg
-		class="motion-preset-fade-lg motion-delay-3600 absolute top-0 right-0 z-[1] ml-auto h-[10rem] w-[22rem] xl:h-[16rem] xl:w-[35rem]"
+		class="motion-preset-fade-lg motion-delay-3600 absolute top-0 right-0 z-[1] ml-auto h-[10rem] w-[22rem] md:h-[15rem] md:w-[30rem] xl:h-[16rem] xl:w-[35rem]"
 		viewBox="0 0 601 258"
 	>
 		<path
@@ -127,7 +127,7 @@
 			fill="none"
 			d="M 0 0 C 210.271484 36.975601 168.967117 234.275818 301 248 C 476.584412 266.25116 507.734375 84.593643 601 87"
 		/>
-		<text class="fill-[#525AFF] text-[25px] font-stretch-100%">
+		<text class="fill-[#525AFF] text-[25px] font-stretch-100% md:text-[30px]">
 			<textPath
 				id="first_curve"
 				href="#curve"

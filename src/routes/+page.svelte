@@ -6,11 +6,18 @@
 	import { onMount } from 'svelte';
 
 	let isSeen = $state(true);
+	let isRestSeen = $state(false);
 
 	onMount(() => {
-		setTimeout(() => {
-			isSeen = false;
-		}, 3500);
+		const parent = document.querySelector('body');
+
+		if (parent) {
+			parent.style.overflow = 'hidden';
+			setTimeout(() => {
+				isSeen = false;
+				parent.style.overflow = 'auto';
+			}, 3500);
+		}
 	});
 </script>
 
@@ -19,8 +26,5 @@
 {/if}
 
 <MainSection />
-
-{#if !isSeen}
-	<AboutSection />
-	<WorkSection />
-{/if}
+<AboutSection />
+<WorkSection />

@@ -2,6 +2,8 @@
 @plugin 'tailwindcss-motion';
 
 @theme {
+	--bg-navbar: radial-gradient(rgba(0, 0, 0, 0) 1px, var(--background) 1px);
+	--breakpoint-xs: 25rem;
 	--font-editundo: 'EditUndo';
 	/* --font-calsans: 'CalSans'; */
 	--animate-marquee: marquee 1.5s infinite linear;
@@ -17,20 +19,15 @@
 }
 
 ::-webkit-scrollbar {
-	width: 7px;
+	display: hidden;
 }
 
 ::-webkit-scrollbar-track {
-	background: #111212;
+	display: hidden;
 }
 
 ::-webkit-scrollbar-thumb {
-	background: gray;
-	border-radius: 5px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-	background: #bf8bff;
+	display: hidden;
 }
 
 @font-face {
@@ -42,4 +39,30 @@
 
 html {
 	scroll-behavior: smooth;
+}
+
+.img-group-container {
+	height: 500vh;
+	position: relative;
+}
+
+.img-group-container > div {
+	position: sticky;
+	top: 10vh;
+	overflow: hidden;
+	height: 80vh;
+}
+
+.img-group {
+	display: flex;
+	gap: 3rem;
+	padding-left: 2rem;
+}
+
+.img-container {
+	display: flex;
+	width: 50vw;
+	height: 79vh;
+	flex: 0 0 auto;
+	flex-direction: column;
 }
