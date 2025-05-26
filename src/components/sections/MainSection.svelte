@@ -35,7 +35,7 @@
 			},
 			{
 				duration: 0.5,
-				delay: stagger(0.03, { startDelay: 3.5 })
+				delay: stagger(0.03)
 			}
 		);
 
@@ -46,9 +46,33 @@
 			},
 			{
 				duration: 1,
-				delay: stagger(0.05, { startDelay: 3.5 })
+				delay: stagger(0.05, { startDelay: 0.1 })
 			}
 		);
+
+		animate(
+			'#down-arrow',
+			{
+				opacity: [0, 0.25]
+			},
+			{
+				delay: 0.8,
+				duration: 0.5
+			}
+		).finished.then(() => {
+			animate(
+				'#down-arrow',
+				{
+					y: [0, -25, 0]
+				},
+				{
+					duration: 2,
+					ease: 'easeInOut',
+					delay: 1,
+					repeat: Infinity
+				}
+			);
+		});
 	});
 </script>
 
@@ -56,7 +80,13 @@
 	id="main"
 	class="flex h-screen w-full flex-col-reverse justify-between font-stretch-150% xl:flex-row"
 >
-	<div class="flex h-full w-full xl:w-fit">
+	<span
+		id="down-arrow"
+		class="absolute top-[85svh] left-[5vw] z-[1] flex w-16 rounded-full border-[0.25rem] border-[#525AFF] p-2.5 md:left-[2vw] md:w-32 md:border-[0.5rem] md:p-5 lg:top-[80svh]"
+	>
+		<img class="w-full" alt="down arrow" src="/down-arrow.svg" />
+	</span>
+	<div class="z-[2] flex h-full w-full xl:w-fit">
 		<div class="jusitify-start flex w-full flex-col md:justify-center">
 			<span
 				class="greeting-text xs:text-5xl flex flex-wrap justify-center gap-0 overflow-clip text-4xl font-extrabold sm:text-7xl md:text-8xl lg:text-8xl xl:justify-start xl:pl-3.5 xl:text-8xl 2xl:pl-2.5 2xl:text-9xl"
@@ -114,11 +144,11 @@
 		<img
 			src="/profile.jpg"
 			alt="profile picture"
-			class="motion-preset-slide-left-lg motion-opacity-in-0 motion-duration-1000 motion-delay-3700 xs:w-96 m-auto w-80 rounded-full sm:w-[25rem] md:w-[30rem] lg:w-[30rem] xl:w-[25rem] 2xl:w-[40rem]"
+			class="motion-preset-slide-left-lg motion-opacity-in-0 motion-duration-1000 motion-delay-700 xs:w-96 m-auto w-80 rounded-full sm:w-[25rem] md:w-[30rem] lg:w-[30rem] xl:w-[25rem] 2xl:w-[40rem]"
 		/>
 	</div>
 	<svg
-		class="motion-preset-fade-lg motion-delay-3600 absolute top-0 right-0 z-[1] ml-auto h-[10rem] w-[22rem] md:h-[15rem] md:w-[30rem] xl:h-[16rem] xl:w-[35rem]"
+		class="motion-opacity-in-0 motion-duration-500 motion-delay-200 absolute top-0 right-0 z-[1] ml-auto h-[10rem] w-[22rem] md:h-[15rem] md:w-[30rem] xl:h-[16rem] xl:w-[35rem]"
 		viewBox="0 0 601 258"
 	>
 		<path

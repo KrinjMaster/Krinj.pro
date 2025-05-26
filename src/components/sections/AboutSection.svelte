@@ -18,68 +18,83 @@
 		calcTravelDistance();
 
 		const sectionNum = document.querySelector('#section-num-1');
-		const aboutText = document.querySelector('#about-text');
+		const aboutText: HTMLParagraphElement | null = document.querySelector('#about-text');
 		const techLogos = document.querySelectorAll('#tech-logo');
 		const logoHeading = document.querySelector('#logo-heading');
+		const aboutTextParagraph = document.querySelectorAll('#about-text p');
 
-		inView('#about-text', () => {
-			const element = document.querySelectorAll('#about-text p');
+		if (aboutText && sectionNum && techLogos && logoHeading && aboutTextParagraph) {
+			console.log(aboutText.style.display);
 
-			if (element && aboutText) {
-				animate(
-					element,
-					{ opacity: [0, 0, 1] },
-					{ ease: 'easeOut', delay: stagger(0.03), duration: 1 }
-				);
-			}
-		});
-
-		inView('#tech-logo-list', () => {
-			animate(logoHeading, { x: ['-10%', 0], opacity: [0, 1] }, { type: 'spring', duration: 1.5 });
-			animate(
-				techLogos,
-				{
-					opacity: [0, 0, 1]
+			inView(
+				aboutText,
+				() => {
+					animate(
+						aboutTextParagraph,
+						{ opacity: [0, 0, 1] },
+						{ ease: 'easeOut', delay: stagger(0.03), duration: 1 }
+					);
 				},
 				{
-					ease: 'easeOut',
-					delay: stagger(0.06),
-					duration: 1
+					amount: 0.5
 				}
 			);
-		});
 
-		if (sectionNum) {
+			inView(
+				'#tech-logo-list',
+				() => {
+					animate(
+						logoHeading,
+						{ x: ['-10%', 0], opacity: [0, 1] },
+						{ type: 'spring', duration: 1.5 }
+					);
+					animate(
+						techLogos,
+						{
+							opacity: [0, 0, 1]
+						},
+						{
+							ease: 'easeOut',
+							delay: stagger(0.06),
+							duration: 1
+						}
+					);
+				},
+				{
+					amount: 0.5
+				}
+			);
+
 			scroll(animate(sectionNum, { y: [travelDistance, 0] }, { ease: 'linear' }), {
 				target: sectionNum
 			});
-		}
 
-		hover('#tech-logo', (el) => {
-			animate(
-				el,
-				{
-					scale: [1, 1.2]
-				},
-				{
-					type: 'spring',
-					duration: 0.35
-				}
-			);
-
-			return () => {
+			hover('#tech-logo', (el) => {
 				animate(
 					el,
 					{
-						scale: [1.2, 1]
+						scale: [1, 1.2]
 					},
 					{
-						ease: 'easeOut',
-						duration: 0.2
+						type: 'spring',
+						duration: 0.35
 					}
 				);
-			};
-		});
+
+				return () => {
+					animate(
+						el,
+						{
+							scale: [1.2, 1]
+						},
+						{
+							ease: 'easeOut',
+							duration: 0.2
+						}
+					);
+				};
+			});
+		}
 	});
 </script>
 
@@ -97,98 +112,98 @@
 		id="about-text"
 		class="xs:text-xl flex flex-wrap justify-self-auto border border-red-500 text-sm font-extrabold sm:text-4xl md:text-4xl lg:text-5xl xl:text-5xl 2xl:text-6xl"
 	>
-		<p>Started</p>
+		<p class="opacity-0">Started</p>
 		<span>&nbsp;</span>
-		<p>career</p>
+		<p class="opacity-0">career</p>
 		<span>&nbsp;</span>
-		<p>in</p>
+		<p class="opacity-0">in</p>
 		<span>&nbsp;</span>
-		<p>2022,</p>
+		<p class="opacity-0">2022,</p>
 		<span>&nbsp;</span>
-		<p>since</p>
+		<p class="opacity-0">since</p>
 		<span>&nbsp;</span>
-		<p>then</p>
+		<p class="opacity-0">then</p>
 		<span>&nbsp;</span>
-		<p>tried</p>
+		<p class="opacity-0">tried</p>
 		<span>&nbsp;</span>
-		<p>and</p>
+		<p class="opacity-0">and</p>
 		<span>&nbsp;</span>
-		<p>fell</p>
+		<p class="opacity-0">fell</p>
 		<span>&nbsp;</span>
-		<p>in</p>
+		<p class="opacity-0">in</p>
 		<span>&nbsp;</span>
-		<p>love</p>
+		<p class="opacity-0">love</p>
 		<span>&nbsp;</span>
-		<p>with</p>
+		<p class="opacity-0">with</p>
 		<span>&nbsp;</span>
-		<p>frontend.</p>
+		<p class="opacity-0">frontend.</p>
 		<span>&nbsp;</span>
-		<p>Although</p>
+		<p class="opacity-0">Although</p>
 		<span>&nbsp;</span>
-		<p>my</p>
+		<p class="opacity-0">my</p>
 		<span>&nbsp;</span>
-		<p>primary</p>
+		<p class="opacity-0">primary</p>
 		<span>&nbsp;</span>
-		<p>focus</p>
+		<p class="opacity-0">focus</p>
 		<span>&nbsp;</span>
-		<p>still</p>
+		<p class="opacity-0">still</p>
 		<span>&nbsp;</span>
-		<p>is</p>
+		<p class="opacity-0">is</p>
 		<span>&nbsp;</span>
-		<p>web</p>
+		<p class="opacity-0">web</p>
 		<span>&nbsp;</span>
-		<p>developemnt,</p>
+		<p class="opacity-0">developemnt,</p>
 		<span>&nbsp;</span>
-		<p>I</p>
+		<p class="opacity-0">I</p>
 		<span>&nbsp;</span>
-		<p>have</p>
+		<p class="opacity-0">have</p>
 		<span>&nbsp;</span>
-		<p>dipped</p>
+		<p class="opacity-0">dipped</p>
 		<span>&nbsp;</span>
-		<p>my</p>
+		<p class="opacity-0">my</p>
 		<span>&nbsp;</span>
-		<p>toes</p>
+		<p class="opacity-0">toes</p>
 		<span>&nbsp;</span>
-		<p>into</p>
+		<p class="opacity-0">into</p>
 		<span>&nbsp;</span>
-		<p>Rust</p>
+		<p class="opacity-0">Rust</p>
 		<span>&nbsp;</span>
-		<p>and</p>
+		<p class="opacity-0">and</p>
 		<span>&nbsp;</span>
-		<p>many</p>
+		<p class="opacity-0">many</p>
 		<span>&nbsp;</span>
-		<p>more</p>
+		<p class="opacity-0">more</p>
 		<span>&nbsp;</span>
-		<p>technologies.</p>
+		<p class="opacity-0">technologies.</p>
 		<span>&nbsp;</span>
-		<p>I</p>
+		<p class="opacity-0">I</p>
 		<span>&nbsp;</span>
-		<p>always</p>
+		<p class="opacity-0">always</p>
 		<span>&nbsp;</span>
-		<p>look</p>
+		<p class="opacity-0">look</p>
 		<span>&nbsp;</span>
-		<p>forward</p>
+		<p class="opacity-0">forward</p>
 		<span>&nbsp;</span>
-		<p>towards</p>
+		<p class="opacity-0">towards</p>
 		<span>&nbsp;</span>
-		<p>discovering</p>
+		<p class="opacity-0">discovering</p>
 		<span>&nbsp;</span>
-		<p>new</p>
+		<p class="opacity-0">new</p>
 		<span>&nbsp;</span>
-		<p>opportunities</p>
+		<p class="opacity-0">opportunities</p>
 		<span>&nbsp;</span>
-		<p>and</p>
+		<p class="opacity-0">and</p>
 		<span>&nbsp;</span>
-		<p>expanding</p>
+		<p class="opacity-0">expanding</p>
 		<span>&nbsp;</span>
-		<p>my</p>
+		<p class="opacity-0">my</p>
 		<span>&nbsp;</span>
-		<p>knowledge.</p>
+		<p class="opacity-0">knowledge.</p>
 		<span>&nbsp;</span>
 	</div>
 	<h1
 		id="logo-heading"
-		class="md:text-md xs:text-2xl mt-auto text-sm font-extralight font-stretch-ultra-expanded lg:text-3xl xl:text-3xl 2xl:text-4xl"
+		class="md:text-md xs:text-2xl mt-auto text-sm font-extralight font-stretch-ultra-expanded opacity-0 lg:text-3xl xl:text-3xl 2xl:text-4xl"
 	>
 		Have used:
 	</h1>
@@ -201,7 +216,7 @@
 				id="tech-logo"
 				src="/js.svg"
 				alt="js logo"
-				class="xs:w-18 w-14 rounded-lg sm:w-24 md:w-28 lg:w-32 xl:w-28 2xl:w-32"
+				class="xs:w-18 w-14 rounded-lg opacity-0 sm:w-24 md:w-28 lg:w-32 xl:w-28 2xl:w-32"
 			/>
 		</li>
 		<li>
@@ -209,7 +224,7 @@
 				id="tech-logo"
 				src="/ts.svg"
 				alt="ts logo"
-				class="xs:w-18 w-14 rounded-lg sm:w-24 md:w-28 lg:w-32 xl:w-28 2xl:w-32"
+				class="xs:w-18 w-14 rounded-lg opacity-0 sm:w-24 md:w-28 lg:w-32 xl:w-28 2xl:w-32"
 			/>
 		</li>
 		<li>
@@ -217,7 +232,7 @@
 				id="tech-logo"
 				src="/rust.svg"
 				alt="rust logo"
-				class="xs:w-18 w-14 rounded-lg sm:w-24 md:w-28 lg:w-32 xl:w-28 2xl:w-32"
+				class="xs:w-18 w-14 rounded-lg opacity-0 sm:w-24 md:w-28 lg:w-32 xl:w-28 2xl:w-32"
 			/>
 		</li>
 		<li>
@@ -225,7 +240,7 @@
 				id="tech-logo"
 				src="/python.svg"
 				alt="python logo"
-				class="xs:w-18 w-14 rounded-lg sm:w-24 md:w-28 lg:w-32 xl:w-28 2xl:w-32"
+				class="xs:w-18 w-14 rounded-lg opacity-0 sm:w-24 md:w-28 lg:w-32 xl:w-28 2xl:w-32"
 			/>
 		</li>
 		<li>
@@ -233,7 +248,7 @@
 				id="tech-logo"
 				src="/react.svg"
 				alt="react logo"
-				class="xs:w-18 w-14 rounded-lg sm:w-24 md:w-28 lg:w-32 xl:w-28 2xl:w-32"
+				class="xs:w-18 w-14 rounded-lg opacity-0 sm:w-24 md:w-28 lg:w-32 xl:w-28 2xl:w-32"
 			/>
 		</li>
 		<li>
@@ -241,7 +256,7 @@
 				id="tech-logo"
 				src="/svelte.svg"
 				alt="svelte logo"
-				class="xs:w-18 w-14 rounded-lg sm:w-24 md:w-28 lg:w-32 xl:w-28 2xl:w-32"
+				class="xs:w-18 w-14 rounded-lg opacity-0 sm:w-24 md:w-28 lg:w-32 xl:w-28 2xl:w-32"
 			/>
 		</li>
 		<li>
@@ -249,7 +264,7 @@
 				id="tech-logo"
 				src="/django.svg"
 				alt="django logo"
-				class="xs:w-18 w-14 rounded-lg sm:w-24 md:w-28 lg:w-32 xl:w-28 2xl:w-32"
+				class="xs:w-18 w-14 rounded-lg opacity-0 sm:w-24 md:w-28 lg:w-32 xl:w-28 2xl:w-32"
 			/>
 		</li>
 		<li>
@@ -257,7 +272,7 @@
 				id="tech-logo"
 				src="/drf.svg"
 				alt="drf logo"
-				class="xs:w-18 w-14 rounded-lg sm:w-24 md:w-28 lg:w-32 xl:w-28 2xl:w-32"
+				class="xs:w-18 w-14 rounded-lg opacity-0 sm:w-24 md:w-28 lg:w-32 xl:w-28 2xl:w-32"
 			/>
 		</li>
 		<li>
@@ -265,7 +280,7 @@
 				id="tech-logo"
 				src="/react-router.svg"
 				alt="react router logo"
-				class="xs:w-18 w-14 rounded-lg sm:w-24 md:w-28 lg:w-32 xl:w-28 2xl:w-32"
+				class="xs:w-18 w-14 rounded-lg opacity-0 sm:w-24 md:w-28 lg:w-32 xl:w-28 2xl:w-32"
 			/>
 		</li>
 		<li>
@@ -273,7 +288,7 @@
 				id="tech-logo"
 				src="/tailwindcss.svg"
 				alt="tailwindcss logo"
-				class="xs:w-18 w-14 rounded-lg sm:w-24 md:w-28 lg:w-32 xl:w-28 2xl:w-32"
+				class="xs:w-18 w-14 rounded-lg opacity-0 sm:w-24 md:w-28 lg:w-32 xl:w-28 2xl:w-32"
 			/>
 		</li>
 		<li>
@@ -281,7 +296,7 @@
 				id="tech-logo"
 				src="/bootstrap.svg"
 				alt="bootstrap logo"
-				class="xs:w-18 w-14 rounded-lg sm:w-24 md:w-28 lg:w-32 xl:w-28 2xl:w-32"
+				class="xs:w-18 w-14 rounded-lg opacity-0 sm:w-24 md:w-28 lg:w-32 xl:w-28 2xl:w-32"
 			/>
 		</li>
 		<li>
@@ -289,7 +304,7 @@
 				id="tech-logo"
 				src="/opencv.svg"
 				alt="opencv logo"
-				class="xs:w-18 w-14 rounded-lg sm:w-24 md:w-28 lg:w-32 xl:w-28 2xl:w-32"
+				class="xs:w-18 w-14 rounded-lg opacity-0 sm:w-24 md:w-28 lg:w-32 xl:w-28 2xl:w-32"
 			/>
 		</li>
 		<li>
@@ -297,7 +312,7 @@
 				id="tech-logo"
 				src="/sqlite.svg"
 				alt="sqlite logo"
-				class="xs:w-18 w-14 rounded-lg sm:w-24 md:w-28 lg:w-32 xl:w-28 2xl:w-32"
+				class="xs:w-18 w-14 rounded-lg opacity-0 sm:w-24 md:w-28 lg:w-32 xl:w-28 2xl:w-32"
 			/>
 		</li>
 		<li>
@@ -305,7 +320,7 @@
 				id="tech-logo"
 				src="/pocketbase.svg"
 				alt="pocketbase logo"
-				class="xs:w-18 w-14 sm:w-24 md:w-28 lg:w-32 xl:w-28 2xl:w-32"
+				class="xs:w-18 w-14 opacity-0 sm:w-24 md:w-28 lg:w-32 xl:w-28 2xl:w-32"
 			/>
 		</li>
 	</ul>

@@ -6,11 +6,11 @@
 		animate(
 			'#navbar',
 			{
-				opacity: [0, 1]
+				y: [-100, 0]
 			},
 			{
 				type: 'spring',
-				delay: 3,
+				delay: 3.7,
 				duration: 1
 			}
 		);

@@ -6,25 +6,18 @@
 	import { onMount } from 'svelte';
 
 	let isSeen = $state(true);
-	let isRestSeen = $state(false);
 
 	onMount(() => {
-		const parent = document.querySelector('body');
-
-		if (parent) {
-			parent.style.overflow = 'hidden';
-			setTimeout(() => {
-				isSeen = false;
-				parent.style.overflow = 'auto';
-			}, 3500);
-		}
+		setTimeout(() => {
+			isSeen = false;
+		}, 3700);
 	});
 </script>
 
 {#if isSeen}
 	<IntroAnimation />
+{:else}
+	<MainSection />
+	<AboutSection />
+	<WorkSection />
 {/if}
-
-<MainSection />
-<AboutSection />
-<WorkSection />
