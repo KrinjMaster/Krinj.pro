@@ -9,8 +9,6 @@
 		const aboutTextParagraph = document.querySelectorAll('#about-text p');
 
 		if (aboutText && techLogos && logoHeading && aboutTextParagraph) {
-			console.log(aboutText.style.display);
-
 			inView(
 				aboutText,
 				() => {
