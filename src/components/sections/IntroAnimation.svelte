@@ -50,6 +50,6 @@
 		<h1 id="secondary_text2" class="intro-letter2">x</h1>
 	</div>
 	<div class="absolute flex w-full justify-center overflow-clip">
-		<img id="main-logo" loading="lazy" src="/LOGO.svg" style={`width: ${textSize * 0.8}px`} />
+		<img id="main-logo" loading="lazy" src="/logo.svg" style={`width: ${textSize * 0.8}px`} />
 	</div>
 </div>

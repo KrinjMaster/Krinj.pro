@@ -29,7 +29,7 @@
 			<a href="#main"
 				><img
 					id="logo"
-					src="/LOGO.svg"
+					src="/logo.svg"
 					alt="logo"
 					class="h-7 transition-all duration-200 ease-in-out hover:scale-90 sm:h-7"
 				/></a
