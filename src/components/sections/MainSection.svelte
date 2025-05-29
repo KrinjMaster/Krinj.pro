@@ -53,7 +53,7 @@
 		animate(
 			'#down-arrow',
 			{
-				opacity: [0, 0.25]
+				opacity: [0, 0.15]
 			},
 			{
 				delay: 0.8,
@@ -63,7 +63,7 @@
 			animate(
 				'#down-arrow',
 				{
-					y: [0, -25, 0]
+					y: [0, -15, 0]
 				},
 				{
 					duration: 2,
@@ -82,9 +82,9 @@
 >
 	<span
 		id="down-arrow"
-		class="absolute top-[85svh] left-[5vw] z-[1] flex w-16 rounded-full border-[0.25rem] border-[#525AFF] p-2.5 md:left-[2vw] md:w-32 md:border-[0.5rem] md:p-5 lg:top-[80svh]"
+		class="absolute top-[85svh] left-[5vw] z-[1] flex w-16 rounded-full border-[0.25rem] border-[#71717a] p-2.5 md:left-[2vw] md:w-32 md:border-[0.5rem] md:p-5 lg:top-[80svh]"
 	>
-		<img class="w-full" alt="down arrow" src="/down-arrow.svg" />
+		<img loading="lazy" class="w-full" alt="down arrow" src="/down-arrow.svg" />
 	</span>
 	<div class="z-[2] flex h-full w-full xl:w-fit">
 		<div class="jusitify-start flex w-full flex-col md:justify-center">
@@ -103,46 +103,99 @@
 				<p>a</p>
 				<p>x</p>
 			</span>
-			<div class="flex items-end gap-1.5 text-center">
-				<span
-					class="short-bio xs:text-sm mt-2.5 flex w-full flex-wrap justify-center px-2.5 pl-4.5 text-[0.75rem] font-normal sm:text-lg md:mt-0 md:text-3xl lg:text-lg xl:w-fit xl:justify-start xl:text-lg 2xl:text-xl"
-				>
-					<p>I'm</p>
-					<span>&nbsp;</span>
-					<p>a</p>
-					<span>&nbsp;</span>
-					<p>{age}</p>
-					<span>&nbsp;</span>
-					<p>a</p>
-					<span>&nbsp;</span>
-					<p>year</p>
-					<span>&nbsp;</span>
-					<p>old</p>
-					<span>&nbsp;</span>
-					<p>developer</p>
-					<span>&nbsp;</span>
-					<p>who</p>
-					<span>&nbsp;</span>
-					<p>strives</p>
-					<span>&nbsp;</span>
-					<p>to</p>
-					<span>&nbsp;</span>
-					<p>create</p>
-					<span>&nbsp;</span>
-					<p>something</p>
-					<span>&nbsp;</span>
+			<div
+				class="short-bio xs:text-sm mt-2.5 flex flex-wrap justify-center px-2.5 pl-4.5 text-[0.75rem] font-normal sm:text-lg md:mt-0 md:text-3xl lg:text-lg xl:w-[80%] xl:justify-start xl:text-lg 2xl:text-xl"
+			>
+				<p>I'm</p>
+				<span>&nbsp;</span>
+				<p>a</p>
+				<span>&nbsp;</span>
+				<p>{age}</p>
+				<span>&nbsp;</span>
+				<p>a</p>
+				<span>&nbsp;</span>
+				<p>year</p>
+				<span>&nbsp;</span>
+				<p>old</p>
+				<span>&nbsp;</span>
+				<p>developer</p>
+				<span>&nbsp;</span>
+				<p>who</p>
+				<span>&nbsp;</span>
+				<p>strives</p>
+				<span>&nbsp;</span>
+				<p>to</p>
+				<span>&nbsp;</span>
+				<p>create</p>
+				<span>&nbsp;</span>
+				<p>something</p>
+				<span>&nbsp;</span>
+				<div class="xs:w-22 flex w-19 flex-col items-center md:w-44 lg:w-27 xl:w-28 2xl:w-30">
 					<p
-						class="bg-gradient-to-r from-violet-400 to-violet-500 bg-clip-text font-extrabold text-transparent"
+						class=" bg-gradient-to-r from-[#525AFF] to-indigo-500 bg-clip-text font-extrabold text-transparent"
 					>
 						beautiful
 					</p>
-				</span>
+					<div
+						class="motion-preset-slide-left-lg motion-delay-800 shadow-wavy-dash-container relative bottom-2 flex justify-center overflow-clip md:bottom-3"
+					>
+						<img
+							loading="lazy"
+							alt="wavy-dash"
+							src="/wavy-dash.svg"
+							class="animate-marquee w-5 md:w-8 lg:w-6"
+						/>
+						<img
+							loading="lazy"
+							alt="wavy-dash"
+							src="/wavy-dash.svg"
+							class="animate-marquee w-5 md:w-8 lg:w-6"
+						/>
+						<img
+							loading="lazy"
+							alt="wavy-dash"
+							src="/wavy-dash.svg"
+							class="animate-marquee w-5 md:w-8 lg:w-6"
+						/>
+						<img
+							loading="lazy"
+							alt="wavy-dash"
+							src="/wavy-dash.svg"
+							class="animate-marquee w-5 md:w-8 lg:w-6"
+						/>
+						<img
+							loading="lazy"
+							alt="wavy-dash"
+							src="/wavy-dash.svg"
+							class="animate-marquee w-5 md:w-8 lg:w-6"
+						/>
+						<img
+							loading="lazy"
+							alt="wavy-dash"
+							src="/wavy-dash.svg"
+							class="animate-marquee w-5 md:w-8 lg:w-6"
+						/>
+						<img
+							loading="lazy"
+							alt="wavy-dash"
+							src="/wavy-dash.svg"
+							class="animate-marquee w-5 md:w-8 lg:w-6"
+						/>
+						<img
+							loading="lazy"
+							alt="wavy-dash"
+							src="/wavy-dash.svg"
+							class="animate-marquee w-5 md:w-8 lg:w-6"
+						/>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
 	<div class="flex h-[60vh] w-full flex-col p-5 xl:h-full xl:w-[35rem]">
 		<img
-			src="/profile.jpg"
+			loading="lazy"
+			src="/profile.webp"
 			alt="profile picture"
 			class="motion-preset-slide-left-lg motion-opacity-in-0 motion-duration-1000 motion-delay-700 xs:w-96 m-auto w-80 rounded-full sm:w-[25rem] md:w-[30rem] lg:w-[30rem] xl:w-[25rem] 2xl:w-[40rem]"
 		/>

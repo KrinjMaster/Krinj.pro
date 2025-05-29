@@ -16,7 +16,9 @@ const config = {
 			$components: 'src/components',
 			'$components/*': 'src/components/*',
 			$sections: 'src/components/sections',
-			'$sections/*': 'src/components/sections/*'
+			'$sections/*': 'src/components/sections/*',
+			$src: 'src',
+			'$src/*': 'src/*'
 		}
 	}
 };

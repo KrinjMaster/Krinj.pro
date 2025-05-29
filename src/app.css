@@ -53,8 +53,6 @@ html {
 
 .img-group {
 	display: flex;
-	gap: 3rem;
-	padding-left: 2rem;
 }
 
 .img-container {

@@ -1,29 +1,14 @@
 <script lang="ts">
-	import { animate, hover, inView, scroll, stagger } from 'motion';
+	import { animate, hover, inView, stagger } from 'motion';
 	import { onMount } from 'svelte';
 
-	let travelDistance = $state(0);
-
-	const calcTravelDistance = () => {
-		if (window && document) {
-			const element = document.querySelector('#section-num-1');
-
-			if (element) {
-				travelDistance = window.innerHeight - element?.clientHeight;
-			}
-		}
-	};
-
 	onMount(() => {
-		calcTravelDistance();
-
-		const sectionNum = document.querySelector('#section-num-1');
 		const aboutText: HTMLParagraphElement | null = document.querySelector('#about-text');
 		const techLogos = document.querySelectorAll('#tech-logo');
 		const logoHeading = document.querySelector('#logo-heading');
 		const aboutTextParagraph = document.querySelectorAll('#about-text p');
 
-		if (aboutText && sectionNum && techLogos && logoHeading && aboutTextParagraph) {
+		if (aboutText && techLogos && logoHeading && aboutTextParagraph) {
 			console.log(aboutText.style.display);
 
 			inView(
@@ -65,10 +50,6 @@
 				}
 			);
 
-			scroll(animate(sectionNum, { y: [travelDistance, 0] }, { ease: 'linear' }), {
-				target: sectionNum
-			});
-
 			hover('#tech-logo', (el) => {
 				animate(
 					el,
@@ -100,17 +81,11 @@
 
 <section
 	id="about"
-	class="flex h-screen w-full flex-col overflow-hidden border px-2.5 py-3.5 font-stretch-150%"
+	class="flex h-screen w-full flex-col overflow-hidden px-2.5 py-3.5 font-stretch-150%"
 >
-	<h1
-		id="section-num-1"
-		class="font-editundo xs:text-[15rem] xs:leading-[13rem] absolute top-[100vh] border text-[10rem] leading-[8rem] font-bold opacity-15 sm:text-[18rem] sm:leading-[16rem] md:text-[20rem] md:leading-[18rem] lg:text-[23rem] lg:leading-[21rem] xl:text-[17rem] xl:leading-[15rem] 2xl:text-[25rem] 2xl:leading-[20rem]"
-	>
-		01
-	</h1>
 	<div
 		id="about-text"
-		class="xs:text-xl flex flex-wrap justify-self-auto border border-red-500 text-sm font-extrabold sm:text-4xl md:text-4xl lg:text-5xl xl:text-5xl 2xl:text-6xl"
+		class="xs:text-xl flex flex-wrap justify-self-auto text-sm font-extrabold sm:text-4xl md:text-4xl lg:text-5xl xl:text-5xl 2xl:text-6xl"
 	>
 		<p class="opacity-0">Started</p>
 		<span>&nbsp;</span>
@@ -209,10 +184,11 @@
 	</h1>
 	<ul
 		id="tech-logo-list"
-		class="z-[1] mb-auto flex h-fit w-full flex-wrap justify-center gap-5 border border-red-500 md:gap-10"
+		class="z-[1] mb-auto flex h-fit w-full flex-wrap justify-center gap-5 md:gap-10 xl:mt-2.5"
 	>
 		<li>
 			<img
+				loading="lazy"
 				id="tech-logo"
 				src="/js.svg"
 				alt="js logo"
@@ -221,6 +197,7 @@
 		</li>
 		<li>
 			<img
+				loading="lazy"
 				id="tech-logo"
 				src="/ts.svg"
 				alt="ts logo"
@@ -229,6 +206,7 @@
 		</li>
 		<li>
 			<img
+				loading="lazy"
 				id="tech-logo"
 				src="/rust.svg"
 				alt="rust logo"
@@ -237,6 +215,7 @@
 		</li>
 		<li>
 			<img
+				loading="lazy"
 				id="tech-logo"
 				src="/python.svg"
 				alt="python logo"
@@ -245,6 +224,7 @@
 		</li>
 		<li>
 			<img
+				loading="lazy"
 				id="tech-logo"
 				src="/react.svg"
 				alt="react logo"
@@ -253,6 +233,7 @@
 		</li>
 		<li>
 			<img
+				loading="lazy"
 				id="tech-logo"
 				src="/svelte.svg"
 				alt="svelte logo"
@@ -261,6 +242,7 @@
 		</li>
 		<li>
 			<img
+				loading="lazy"
 				id="tech-logo"
 				src="/django.svg"
 				alt="django logo"
@@ -269,6 +251,7 @@
 		</li>
 		<li>
 			<img
+				loading="lazy"
 				id="tech-logo"
 				src="/drf.svg"
 				alt="drf logo"
@@ -277,6 +260,7 @@
 		</li>
 		<li>
 			<img
+				loading="lazy"
 				id="tech-logo"
 				src="/react-router.svg"
 				alt="react router logo"
@@ -285,6 +269,7 @@
 		</li>
 		<li>
 			<img
+				loading="lazy"
 				id="tech-logo"
 				src="/tailwindcss.svg"
 				alt="tailwindcss logo"
@@ -293,6 +278,7 @@
 		</li>
 		<li>
 			<img
+				loading="lazy"
 				id="tech-logo"
 				src="/bootstrap.svg"
 				alt="bootstrap logo"
@@ -301,6 +287,7 @@
 		</li>
 		<li>
 			<img
+				loading="lazy"
 				id="tech-logo"
 				src="/opencv.svg"
 				alt="opencv logo"
@@ -309,6 +296,7 @@
 		</li>
 		<li>
 			<img
+				loading="lazy"
 				id="tech-logo"
 				src="/sqlite.svg"
 				alt="sqlite logo"
@@ -317,6 +305,7 @@
 		</li>
 		<li>
 			<img
+				loading="lazy"
 				id="tech-logo"
 				src="/pocketbase.svg"
 				alt="pocketbase logo"
